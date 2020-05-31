@@ -1,75 +1,59 @@
 # WebUI
 
-用户界面
+学记助理网页版客户端，一款基于统一语义结合智能助理（小五）对话式交互的智能文档，主要用于辅助高效学习与知识管理，目的在于探索一种新的**知识载体与交互方式**，通过开放社区、人机协作的方式，化繁为简降低信息熵，协同积累知识财富！
 
 ## 特性 Features
 
-- 服务端渲染
-- GraphQL + websocket
-- CSS-in-JS + SCSS
-- 中英文
 
-## 技术栈 Tech stack
 
-- Typescript
-- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+## 技术栈
+
+- [React](https://github.com/facebook/react/) - A declarative, efficient, and flexible JavaScript library for building user interfaces. 
 - [Next.js](https://nextjs.org/) - The React Framework
-- [Material UI](https://material-ui.com/) - React components that implement Google's Material Design.
-- [Express](https://expressjs.com/)
-- Apollo
-- PostgreSQL、pgAdmin
-- [dotenv](https://github.com/motdotla/dotenv/) - Loads environment variables from .env for nodejs projects
-- [dotenv-webpack](https://github.com/mrsteele/dotenv-webpack/) - A secure webpack plugin that supports dotenv and other environment variables and only exposes what you choose and use.
-- react-actions
-- **redux** for handling application state
-- **redux-saga** for handling async actions and side-effects
-- **next-routes** for handling dynamic routes
-- **axios** for making HTTP requests
-- **redux-devtools** in development
-- **redux-logger** in development for managing actions and state changes they cause
-- **universal-cookie-express** as a middleware for easily writing cookies
-- **compression** for compressing static assets
-- **babel-plugin-module-resolver** for importing modules related to the root directory
-- **prettier** and **eslint** configured with **airbnb**'s styleguide for formating code
-- **husky** and **lint-staged** for autoformatting code before commit
-
-## TODO
-
-- 搭建基本脚手架，添加目录结构及文档
+- [Material UI](https://material-ui.com/) - React components for faster and easier web development. Build your own design system, or start with Material Design.
+- [Typescript](https://github.com/Microsoft/TypeScript) - A superset of JavaScript that compiles to clean JavaScript output.
+- [Redux](https://github.com/reduxjs/redux) - Predictable state container for JavaScript apps
+- [Redux-saga](https://github.com/redux-saga/redux-saga) - An alternative side effect model for Redux apps
+- [GraphQL](https://graphql.com/) - GraphQL is an open spec for a flexible API layer.
+- [JSS](https://github.com/cssinjs/jss) - JSS is an authoring tool for CSS which uses JavaScript as a host language.
+- [Three.js](https://github.com/mrdoob/three.js/) - JavaScript 3D library.
+- [Konva.js](https://konvajs.org/) - HTML5 2d canvas js library for desktop and mobile applications 
+- [Recharts](http://recharts.org/en-US/) - A composable charting library built on React components
+- [Prettier](https://github.com/prettier/prettier) - Prettier is an opinionated code formatter.
+- [Eslint](https://github.com/eslint/eslint) - Find and fix problems in your JavaScript code. 
+- [PM2](https://github.com/Unitech/pm2) - Node.js Production Process Manager with a built-in Load Balancer. 
+- Websocket
 
 ## 约定
 
 - 目录使用小写字母
 - 组件文件使用大写字母
-- Page 页面使用小写字母
-- [关于主题样式](./doc/style.md)
+- 页面文件使用小写字母
 - 组件分类：
-  1. 主界面 /pages，页面初始化、路由入口
-  1. 容器 /containers，为组件注入状态
-  1. 模块 /module
-  1. 通用组件 /components/common
-  1. 高阶组件 /components/hoc
+  1. 页面组件 /pages，页面初始化、路由入口
+  1. 容器组件 src/containers，为组件注入状态
+  1. 通用组件 src/components/common
+  1. 高阶组件 src/components/hoc
+  1. 模块组件 src/module
 
-### quik start
+- [关于主题样式](./doc/style.md)
+
+## 开发
 
 ```bash
-# prepare `.env` and edit it for your own environments
+# 配置变量
 $ cp .env.example .env
 
-# install dependencies
-$ 
+# 安装依赖
+$ cnpm i
 
-# development mode
-$ 
-
-# production mode
-$ 
-$ 
+# 开发模式
+$ cnpm run dev
 ```
 
-## Production Deployment
+## 部署到生产环境
 
-[pm2](https://github.com/Unitech/pm2/) for Node.js process managements.
+[pm2](https://github.com/Unitech/pm2/) Node.js Production Process Manager 
 
 ```bash
 # install pm2
@@ -79,11 +63,11 @@ $ pm2 start
 
 ## Roadmaps
 
-- [ ] Security: environment variables both server and client
-- [ ] Security: production ready session store
-- [ ] Security: custom auth guards
-- [ ] Server: integration [nest](https://nestjs.com/) or oat++
-- [ ] Feature: authentication
+- [ ] Client: nextjs Typescript material-ui redux threejs
+- [ ] Deployment: nginx pm2 nodejs
 - [ ] Test: unit tests
 - [ ] Test: e2e tests
+- [ ] Api: OpenAPI websocket GraphQL
+- [ ] Server: integration oat++
+- [ ] Feature: authentication
 
